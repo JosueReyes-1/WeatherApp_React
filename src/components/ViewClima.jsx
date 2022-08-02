@@ -1,7 +1,8 @@
 
 import { useEffect, useState } from "react";
 import { getClimaAhora } from "../helpers/getClimaAhora";
-import { ViewClimaData } from "./ViewClimaData";
+import { ViewClimaContainer } from "./ViewClimaContainer";
+
 
 
 
@@ -30,11 +31,15 @@ export const ViewClima = ({ ciudad }) => {
                     <p>Miercoles 10 de agosto</p>
                     <div className="d-flex h-75">
                         <div className="w-50  d-flex flex-column justify-content-center text-center">
-                            <h1 className="text-light display-1">{Math.round(info.main.temp)} ºC</h1>
-                            <p className="text-light h3">{info.weather[0].description}</p>
+                            <img src={`http://openweathermap.org/img/w/${info.weather[0].icon}.png`} alt=""/>
+                            <div>
+                                <h1 className="text-light display-1">{Math.round(info.main.temp)} ºC</h1>
+                                <p className="text-light h3">{info.weather[0].description}</p>
+                            </div>
+                            
                         </div>
                         <div className="w-50 bg-light rounded shadow opacity-25">
-                            <ViewClimaData title={info.sys.country} />
+                            <ViewClimaContainer data={info} />
                         </div>
                     </div>
                 </>
