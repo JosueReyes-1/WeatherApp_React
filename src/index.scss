@@ -1,0 +1,14 @@
+
+
+$azul_fondo:#161853;
+$azul_item:#292C6D;
+$blanco:#FFFFFF;
+
+
+$primary:$azul_fondo;
+$secondary:$azul_item;
+$light:$blanco;
+
+$border-radius:30px;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
