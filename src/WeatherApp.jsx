@@ -1,6 +1,7 @@
 import {  useState } from "react"
 import { AddCountry } from "./components/AddCountry"
 import { ViewClima } from "./components/ViewClima"
+import { ViewForecast } from "./components/ViewForecast"
 import './weatherapp.scss'
 
 export const WeatherApp = () => {
@@ -16,6 +17,7 @@ export const WeatherApp = () => {
     <div className="fondo vh-100">
       <AddCountry onNewCiudad={(event) => onAddCiudad(event)} />
       <ViewClima key={ciudad} ciudad={ciudad}/>
+      <ViewForecast key={ciudad} ciudad={ciudad}/>
     </div>
 
   )
