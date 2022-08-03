@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { getClimaAhora } from "../helpers/getClimaAhora";
 import { ViewClimaContainer } from "./ViewClimaContainer";
+import { ViewForecast } from "./ViewForecast";
 
 
 
@@ -15,7 +16,6 @@ export const ViewClima = ({ ciudad }) => {
         setInfo(newInfo)
     }
 
-    console.log(info)
     useEffect(() => {
         getInfo();
     }, [])
@@ -24,6 +24,7 @@ export const ViewClima = ({ ciudad }) => {
 
 
     return (
+        <>
         <div className="h-50  mt-5 mx-5">
             {(typeof info.main != "undefined") ? (
                 <>
@@ -45,5 +46,7 @@ export const ViewClima = ({ ciudad }) => {
                 </>
             ) : ('')}
         </div>
+        <ViewForecast key={ciudad} ciudad={ciudad}/>
+        </>
     )
 }
