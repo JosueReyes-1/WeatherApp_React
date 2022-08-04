@@ -16,7 +16,7 @@ export const ViewForecast = ({ ciudad }) => {
   }, [])
 
   return (
-    <div className="d-flex justify-content-around h-25 mt-5">
+    <div className="row row-cols-1 row-cols-2 mt-2 g-1">
       {data.map((forecast) => (
         <CardForecast key={forecast.id} {...forecast}/>
       ))}

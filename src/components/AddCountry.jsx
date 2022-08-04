@@ -17,7 +17,7 @@ export const AddCountry = ({ onNewCiudad }) => {
   }
 
   return (
-    <form onSubmit={onSubmit} className=" w-50 m-auto pt-5">
+    <form onSubmit={onSubmit} className=" w-100 m-auto px-3 pt-5">
       <input
         className="form-control bg-light"
         type="text"

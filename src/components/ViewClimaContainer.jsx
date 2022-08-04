@@ -15,7 +15,7 @@ export const ViewClimaContainer = ({ data }) => {
                     </div>
                 </div>
             </div>
-            <div className="carousel-inner  h-50">
+            <div className="carousel-inner pt-3 h-50">
                 <div className="carousel-item active h-100">
                     <div className=" w-100 d-flex justify-content-around h-100 align-items-center text-center ">
                         <ClimaCardData title={data.main.temp_min + 'º'} text={'Low'} />
