@@ -16,7 +16,7 @@ export const ViewForecast = ({ ciudad }) => {
   }, [])
 
   return (
-    <div className="row row-cols-1 row-cols-2 mt-2 g-1">
+    <div className="row row-cols-1 row-cols-2 mt-5 g-1 container-fluid " >
       {data.map((forecast) => (
         <CardForecast key={forecast.id} {...forecast}/>
       ))}

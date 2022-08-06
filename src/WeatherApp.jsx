@@ -17,7 +17,7 @@ export const WeatherApp = () => {
   }
 
   return (
-    <div className="fondo vh-100">
+    <div className="fondo min-vh-100">
       <AddCountry onNewCiudad={(event) => onAddCiudad(event)} />
       <ViewClima key={ciudad} ciudad={ciudad}/>
       
