@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-
+import { motion } from "framer-motion"
 
 export const AddCountry = ({ onNewCiudad }) => {
 
@@ -17,13 +17,20 @@ export const AddCountry = ({ onNewCiudad }) => {
   }
 
   return (
-    <form onSubmit={onSubmit} className=" w-100 m-auto px-3 pt-5">
-      <input
-        className="form-control bg-light"
-        type="text"
-        value={inputValue}
-        onChange={onInputChange}
-      />
-    </form>
+    <motion.div >
+      <form onSubmit={onSubmit} className=" w-100 m-auto px-3 pt-5">
+        <motion.input
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          initial={{ opacity: 0,scale:0}}
+          animate={{ opacity: 1,scale:1 }}
+          className="form-control bg-light"
+          type="text"
+          placeholder="Buscar Ciudad"
+          value={inputValue}
+          onChange={onInputChange}
+        />
+      </form>
+    </motion.div>
   )
 }
