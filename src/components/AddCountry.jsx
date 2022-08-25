@@ -20,7 +20,6 @@ export const AddCountry = ({ onNewCiudad }) => {
     <motion.div >
       <form onSubmit={onSubmit} className=" w-100 m-auto px-3 pt-5">
         <motion.input
-          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0,scale:0}}
           animate={{ opacity: 1,scale:1 }}
